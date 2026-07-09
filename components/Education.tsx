@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 export default function Education() {
     return (
         <section className="flex flex-col items-center">
             <h2>Education</h2>
             <article>
+                <Image
+                    src="/mcgill-university.jpg"
+                    alt="McGill University"
+                    width={96}
+                    height={96}
+                />
                 <h3>B.Eng - Software Engineering Co-op</h3>
                 <p>McGill University, Montreal, Canada</p>
                 <p>2025-2029</p>
