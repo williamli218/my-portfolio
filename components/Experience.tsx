@@ -41,32 +41,34 @@ export default function Experience() {
         <section className="flex flex-col items-center">
             <h2 className="header">Experience</h2>
 
-            {experiences.map(experience => (
-                <article key={experience.organization} className="m-8 p-4 border rounded-lg flex flex-col gap-2 max-w-2xl">
-                    <div className="flex items-center gap-4">
-                        <Image 
-                            src={experience.logo}
-                            alt={experience.organization}
-                            width={48}
-                            height={48}
-                            className="border border-black rounded-lg"
-                        />
-                        <div className="flex-1">
-                            <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="font-bold">{experience.organization}</h3>
-                                <span className="text-zinc-700 text-sm">{experience.location}</span>
+            <div className="relative max-w-2xl">
+                {experiences.map(experience => (
+                    <article key={experience.organization} className="m-8 p-4 border rounded-lg flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                            <Image 
+                                src={experience.logo}
+                                alt={experience.organization}
+                                width={48}
+                                height={48}
+                                className="border border-black rounded-lg"
+                            />
+                            <div className="flex-1">
+                                <div className="flex flex-wrap justify-between items-center">
+                                    <h3 className="font-bold">{experience.organization}</h3>
+                                    <span className="text-zinc-700 text-sm">{experience.location}</span>
+                                </div>
+                                <h4 className="italic">{experience.role}</h4>
                             </div>
-                            <h4 className="italic">{experience.role}</h4>
                         </div>
-                    </div>
-                    <span>{experience.dates}</span>
-                    <ul className="list-disc list-outside flex flex-col gap-2 ml-4">
-                        {experience.responsibilities.map((resp) => (
-                            <li key={resp}>{resp}</li>
-                        ))}
-                    </ul>
-                </article>
-            ))}
+                        <span>{experience.dates}</span>
+                        <ul className="list-disc list-outside flex flex-col gap-2 ml-4">
+                            {experience.responsibilities.map((resp) => (
+                                <li key={resp}>{resp}</li>
+                            ))}
+                        </ul>
+                    </article>
+                ))}
+            </div>
 
         </section>
     )
