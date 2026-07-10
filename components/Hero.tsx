@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { MapPin, GraduationCap, Mail } from "lucide-react";
-import { SiGithub } from "@icons-pack/react-simple-icons";
 
 export default function Hero() {
     return (
@@ -13,39 +12,44 @@ export default function Hero() {
                 className="w-48 h-48 rounded-full"
             />
 
-            <h1 className="text-center">
+            <h1 className="text-center header my-1">
                 Welcome to my portfolio!
                 <br />
                 I am William Li
             </h1>
 
-            <ul className="flex gap-4">
-                <li className="flex gap-1">
-                    <MapPin />
+            <ul className="flex gap-4 text-sm text-zinc-700">
+                <li className="flex gap-1 items-center">
+                    <MapPin size={16} />
                     <span>Montreal, Canada</span>
                 </li>
-                <li className="flex gap-1">
-                    <GraduationCap />
+                <li className="flex gap-1 items-center">
+                    <GraduationCap size={16} />
                     <span>McGill University</span>
                 </li>
             </ul>
 
-            <address className="not-italic">
+            <address className="not-italic mt-2">
                 <ul className="flex gap-4">
-                    <li className="flex gap-1">
+                    <li className="address">
                         <Image 
-                            src="/linkedin.png"
+                            src="/linkedin.svg"
                             alt="LinkedIn"
                             width={24}
                             height={24}
                         />
-                        <a href="https://www.linkedin.com/in/william-li-218/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/williamli218/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </li>
-                    <li className="flex gap-1">
-                        <SiGithub />
+                    <li className="address">
+                        <Image 
+                            src="/github.svg"
+                            alt="GitHub"
+                            width={24}
+                            height={24}
+                        />
                         <a href="https://github.com/williamli218" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </li>
-                    <li className="flex gap-1">
+                    <li className="address">
                         <Mail />
                         <a href="mailto:william.jy.li@gmail.com">Email</a>
                     </li>

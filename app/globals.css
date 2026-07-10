@@ -1,1 +1,17 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+body {
+    font-family: var(--font-geist-sans), sans-serif;
+}
+
+.header {
+    @apply font-bold text-2xl;
+}
+
+.address {
+  @apply flex gap-1 items-center border rounded-lg p-1 transition-all;
+}
+
+.address:hover {
+  @apply -translate-y-0.5 border-zinc-400 bg-zinc-50;
+}
