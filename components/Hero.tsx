@@ -9,7 +9,7 @@ export default function Hero() {
                 alt="Profile Image"
                 width={200}
                 height={200}
-                className="w-48 h-48 rounded-full"
+                className="rounded-full"
             />
 
             <h1 className="text-center header my-1">
