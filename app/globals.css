@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 .header {
-    @apply font-bold text-2xl;
+  @apply font-bold text-2xl;
 }
 
 .address {

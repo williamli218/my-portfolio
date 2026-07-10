@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Education() {
     return (
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center" id="education">
             <h2 className="header">Education</h2>
             <article className="flex flex-col gap-2 border rounded-lg m-8 p-4">
                 <div className="flex items-center gap-4">

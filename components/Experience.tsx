@@ -38,7 +38,7 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center" id="experience">
             <h2 className="header">Experience</h2>
 
             <div className="relative max-w-2xl">

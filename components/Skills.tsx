@@ -44,7 +44,7 @@ function IconGrid({ items }: { items: { src: string; alt: string }[] }) {
 
 export default function Skills() {
   return (
-    <section className="flex flex-col gap-4 items-center">
+    <section className="flex flex-col gap-4 items-center" id="skills">
       <h2 className="header">Technical Skills</h2>
       <h3 className="font-bold">Programming Languages</h3>
       <IconGrid items={programmingLanguages} />
