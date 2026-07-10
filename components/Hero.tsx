@@ -18,7 +18,7 @@ export default function Hero() {
                 I am William Li
             </h1>
 
-            <ul className="flex gap-4 text-sm text-zinc-700">
+            <ul className="flex gap-8 text-sm text-zinc-700">
                 <li className="flex gap-1 items-center">
                     <MapPin size={16} />
                     <span>Montreal, Canada</span>
