@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Education() {
     return (
-        <section className="flex flex-col items-center m-8">
+        <section className="flex flex-col items-center">
             <h2 className="header">Education</h2>
-            <article className="flex flex-col gap-2 border rounded-lg p-4">
+            <article className="flex flex-col gap-2 border rounded-lg m-8 p-4">
                 <div className="flex items-center gap-4">
                     <Image
                         src="/mcgill-university.jpg"
@@ -18,7 +18,7 @@ export default function Education() {
                             <h3 className="font-bold">McGill University</h3>
                             <span className="text-zinc-700 text-sm">Montreal, Canada</span>
                         </div>
-                        <p>B.Eng - Software Engineering Co-op</p>
+                        <p className="italic">B.Eng - Software Engineering Co-op</p>
                     </div>
                 </div>
                 <p>August 2025 - May 2029</p>
