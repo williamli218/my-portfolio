@@ -27,3 +27,24 @@ body {
 .card:hover {
   @apply shadow-2xl -translate-y-2
 }
+
+.animate-rainbow-text {
+  background: linear-gradient(
+    to right,
+    #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000
+  );
+  background-size: 800% 100%;   /* much bigger than before */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-slide 15s linear infinite;
+}
+
+@keyframes rainbow-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
