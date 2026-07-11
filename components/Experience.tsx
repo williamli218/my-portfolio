@@ -47,7 +47,7 @@ export default function Experience() {
                     {experiences.map(experience => (
                         <div key={experience.organization} className="relative">
                             <div className="absolute left-0 top-19 w-3 h-3 -translate-x-1/2 rounded-full bg-zinc-100 border-2 border-zinc-900" />
-                            <article className="ml-6 md:ml-8 flex flex-col gap-2 card">
+                            <article className="ml-6 md:ml-8 flex flex-col gap-2 card p-4">
                                 <div className="flex items-center gap-4">
                                     <Image 
                                         src={experience.logo}
@@ -64,7 +64,7 @@ export default function Experience() {
                                         <h4 className="italic">{experience.role}</h4>
                                     </div>
                                 </div>
-                                <span>{experience.dates}</span>
+                                <span className="text-sm rounded-lg bg-zinc-100 text-zinc-700 w-fit p-1 border">{experience.dates}</span>
                                 <ul className="list-disc list-outside flex flex-col gap-2 ml-4">
                                     {experience.responsibilities.map((resp) => (
                                         <li key={resp}>{resp}</li>

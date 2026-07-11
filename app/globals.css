@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-  @apply shadow-sm transition-all bg-white border rounded-lg p-4;
+  @apply shadow-sm transition-all bg-white border rounded-lg;
 }
 
 .card:hover {
@@ -33,7 +33,7 @@ body {
     to right,
     #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000
   );
-  background-size: 800% 100%;   /* much bigger than before */
+  background-size: 800% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

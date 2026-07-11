@@ -12,7 +12,7 @@ export default function Education() {
             <div className="m-8 [perspective:1200px]">
                 <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] ${
         isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
-                    <article className="flex flex-col gap-2 card relative [backface-visibility:hidden]">
+                    <article className="flex flex-col gap-2 card relative [backface-visibility:hidden] p-4">
                         <div className="flex items-center gap-4">
                             <Image
                                 src="/mcgill-university.jpg"
