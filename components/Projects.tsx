@@ -12,9 +12,9 @@ const icons = [
 export default function Projects() {
     return (
         <section id="projects">
-            <h2 className="header text-center">Projects</h2>
+            <h2 className="header text-center pt-16">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-8">
-                <article className="border rounded-lg p-4 flex flex-col gap-2">
+                <article className="border rounded-lg p-4 flex flex-col gap-2 card">
                     <Image 
                         src="/portfolio.jpg"
                         alt="Portfolio"

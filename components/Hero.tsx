@@ -3,7 +3,7 @@ import { MapPin, GraduationCap, Mail } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col items-center" id="hero">
+        <section className="flex flex-col items-center pt-16" id="hero">
             <Image
                 src="/profile.jpg"
                 alt="Profile Image"

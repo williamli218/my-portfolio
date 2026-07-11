@@ -38,12 +38,12 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section className="flex flex-col items-center" id="experience">
+        <section className="flex flex-col items-center pt-16" id="experience">
             <h2 className="header">Experience</h2>
 
             <div className="relative max-w-2xl">
                 {experiences.map(experience => (
-                    <article key={experience.organization} className="m-8 p-4 border rounded-lg flex flex-col gap-2">
+                    <article key={experience.organization} className="m-8 p-4 border rounded-lg flex flex-col gap-2 card">
                         <div className="flex items-center gap-4">
                             <Image 
                                 src={experience.logo}

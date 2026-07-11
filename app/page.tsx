@@ -9,7 +9,7 @@ import Leadership from "@/components/Leadership";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-zinc-100">
       <Hero />
       <About />
       <Education />
