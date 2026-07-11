@@ -32,10 +32,6 @@ export default function Education() {
                     <li>Software Engineering</li>
                     <li>Operating Systems</li>
                     <li>Database Systems</li>
-                    <li>Functional Programming</li>
-                    <li>Linux Systems & C</li>
-                    <li>Computer Architecture</li>
-                    <li>Object-Oriented Programming</li>
                 </ul>
             </article>
         </section>

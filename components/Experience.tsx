@@ -8,8 +8,8 @@ const experiences = [
         location: "Montreal, Canada",
         dates: "May 2026 - August 2026",
         responsibilities: [
-            "Reverse-engineered a complex MS Access 2007 database (VBA, SQL queries, forms) and migrated it to Access 365, while developing new custom features tailored to specific client demands.",
-            "Resolved legacy compatibility issues, refactored obsolete VBA code, and optimized queries to enhance overall application speed, data integrity, and system stability." 
+            "Migrated a legacy MS Access 2007 database to Access 365, rebuilding VBA logic and SQL queries while adding custom features for client needs.",
+            "Refactored obsolete VBA code and optimized queries, improving application speed, data integrity, and stability."
         ]
     },
     {
@@ -19,9 +19,9 @@ const experiences = [
         location: "Montreal, Canada",
         dates: "October 2025 - April 2026",
         responsibilities: [
-            "Engineered custom plugins and intuitive UI interfaces within MissionPlanner to surface critical telemetry data, significantly improving operator situational awareness and workflow efficiency (C# & .NET).",
-            "Designed the end-to-end ground station architecture and configured the core Raspberry Pi computer, deploying automated Bash scripts to manage hardware connections, Walksnail HD video receivers, and radio transmitters for robust bidirectional drone communication.",
-            "Programmed low-level C++ scripts to interface directly with physical switches, buttons, and joysticks, accurately interpreting peripheral inputs to map and execute real-time flight control commands."
+            "Built custom MissionPlanner plugins and UI (C#, .NET) to surface telemetry data and improve operator awareness.",
+            "Configured the Raspberry Pi ground station, scripting hardware, video, and radio connections in Bash.",
+            "Wrote low-level C++ to interface with physical controls, mapping inputs to real-time flight commands."
         ]
     },
     {
@@ -31,7 +31,7 @@ const experiences = [
         location: "Montreal, Canada",
         dates: "September 2025 - Present",
         responsibilities: [
-            "Developed interactive games by implementing custom gameplay mechanics and game logic using C# and object-oriented programming principles within the Unity engine."
+            "Built gameplay mechanics and game logic in Unity using C# and OOP principles."
         ]
     }
 ]
@@ -41,33 +41,39 @@ export default function Experience() {
         <section className="flex flex-col items-center pt-16" id="experience">
             <h2 className="header">Experience</h2>
 
-            <div className="relative max-w-2xl">
-                {experiences.map(experience => (
-                    <article key={experience.organization} className="m-8 flex flex-col gap-2 card">
-                        <div className="flex items-center gap-4">
-                            <Image 
-                                src={experience.logo}
-                                alt={experience.organization}
-                                width={48}
-                                height={48}
-                                className="border border-black rounded-lg"
-                            />
-                            <div className="flex-1">
-                                <div className="flex flex-wrap justify-between items-center">
-                                    <h3 className="font-bold">{experience.organization}</h3>
-                                    <span className="text-zinc-700 text-sm">{experience.location}</span>
+            <div className="relative max-w-2xl mx-8 mt-8">
+                <div className="absolute left-0 top-0 bottom-0 w-px bg-zinc-900" />
+                <div className="space-y-8">
+                    {experiences.map(experience => (
+                        <div key={experience.organization} className="relative">
+                            <div className="absolute left-0 top-19 w-3 h-3 -translate-x-1/2 rounded-full bg-zinc-100 border-2 border-zinc-900" />
+                            <article className="ml-6 md:ml-8 flex flex-col gap-2 card">
+                                <div className="flex items-center gap-4">
+                                    <Image 
+                                        src={experience.logo}
+                                        alt={experience.organization}
+                                        width={48}
+                                        height={48}
+                                        className="border border-black rounded-lg"
+                                    />
+                                    <div className="flex-1">
+                                        <div className="flex flex-wrap justify-between items-center">
+                                            <h3 className="font-bold">{experience.organization}</h3>
+                                            <span className="text-zinc-700 text-sm">{experience.location}</span>
+                                        </div>
+                                        <h4 className="italic">{experience.role}</h4>
+                                    </div>
                                 </div>
-                                <h4 className="italic">{experience.role}</h4>
-                            </div>
+                                <span>{experience.dates}</span>
+                                <ul className="list-disc list-outside flex flex-col gap-2 ml-4">
+                                    {experience.responsibilities.map((resp) => (
+                                        <li key={resp}>{resp}</li>
+                                    ))}
+                                </ul>
+                            </article>
                         </div>
-                        <span>{experience.dates}</span>
-                        <ul className="list-disc list-outside flex flex-col gap-2 ml-4">
-                            {experience.responsibilities.map((resp) => (
-                                <li key={resp}>{resp}</li>
-                            ))}
-                        </ul>
-                    </article>
-                ))}
+                    ))}
+                </div>
             </div>
 
         </section>
