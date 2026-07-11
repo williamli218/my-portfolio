@@ -3,13 +3,13 @@ import { MapPin, GraduationCap, Mail } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col items-center pt-16" id="hero">
+        <section className="flex flex-col items-center pt-16 gap-4" id="hero">
             <Image
                 src="/profile.jpg"
                 alt="Profile Image"
                 width={200}
                 height={200}
-                className="rounded-full"
+                className="rounded-full w-50 h-50"
             />
 
             <h1 className="text-center header my-1">
@@ -18,7 +18,7 @@ export default function Hero() {
                 I am William Li
             </h1>
 
-            <ul className="flex gap-8 text-sm text-zinc-700">
+            <ul className="flex gap-4 text-sm text-zinc-700">
                 <li className="flex gap-1 items-center">
                     <MapPin size={16} />
                     <span>Montreal, Canada</span>

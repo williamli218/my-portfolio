@@ -4,7 +4,7 @@ export default function Education() {
     return (
         <section className="flex flex-col items-center pt-16" id="education">
             <h2 className="header">Education</h2>
-            <article className="flex flex-col gap-2 border rounded-lg m-8 p-4 card">
+            <article className="flex flex-col gap-2 m-8 card">
                 <div className="flex items-center gap-4">
                     <Image
                         src="/mcgill-university.jpg"

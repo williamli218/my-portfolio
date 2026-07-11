@@ -43,7 +43,7 @@ export default function Experience() {
 
             <div className="relative max-w-2xl">
                 {experiences.map(experience => (
-                    <article key={experience.organization} className="m-8 p-4 border rounded-lg flex flex-col gap-2 card">
+                    <article key={experience.organization} className="m-8 flex flex-col gap-2 card">
                         <div className="flex items-center gap-4">
                             <Image 
                                 src={experience.logo}
