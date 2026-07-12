@@ -17,7 +17,7 @@ const extracurricular = [
     },
     {
         title: "Mathematics and Biology Academic Achievement Awards",
-        description: "Best grades cohort in mathematics and biology during cégep",
+        description: "Best grades in cohort in mathematics and biology during cégep",
         type: "Academic awards",
         src: "/awards.jpg"
     }
@@ -106,7 +106,7 @@ export default function Leadership() {
                 <button
                     onClick={goPrev}
                     aria-label="Previous"
-                    className="hidden md:flex shrink-0 w-10 h-10 items-center justify-center rounded-full border hover:bg-zinc-100 transition-colors z-10"
+                    className="hidden md:flex shrink-0 w-10 h-10 items-center justify-center rounded-full border hover:bg-zinc-200 transition-colors z-10"
                 >
                     ←
                 </button>
@@ -141,7 +141,7 @@ export default function Leadership() {
                 <button
                     onClick={goNext}
                     aria-label="Next"
-                    className="hidden md:flex shrink-0 w-10 h-10 items-center justify-center rounded-full border hover:bg-zinc-100 transition-colors z-10"
+                    className="hidden md:flex shrink-0 w-10 h-10 items-center justify-center rounded-full border hover:bg-zinc-200 transition-colors z-10"
                 >
                     →
                 </button>

@@ -7,8 +7,8 @@ export default function Hero() {
             <Image
                 src="/profile.jpg"
                 alt="Profile Image"
-                width={200}
-                height={200}
+                width={400}
+                height={400}
                 className="rounded-full w-50 h-50"
             />
 
@@ -21,11 +21,25 @@ export default function Hero() {
             <ul className="flex gap-4 text-sm text-zinc-700">
                 <li className="flex gap-1 items-center">
                     <MapPin size={16} />
-                    <span>Montreal, Canada</span>
+                    <a 
+                        href="https://en.wikipedia.org/wiki/Montreal" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="link"
+                    >
+                        Montreal, Canada
+                    </a>
                 </li>
                 <li className="flex gap-1 items-center">
                     <GraduationCap size={16} />
-                    <span>McGill University</span>
+                    <a
+                        href="https://www.mcgill.ca/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link"
+                    >
+                        McGill University
+                    </a>
                 </li>
             </ul>
 

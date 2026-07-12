@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
 
 export default function Education() {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -23,7 +24,17 @@ export default function Education() {
                             />
                             <div className="flex-1">
                                 <div className="flex flex-wrap justify-between items-center">
-                                    <h3 className="font-bold">McGill University</h3>
+                                    <a
+                                                href="https://www.mcgill.ca/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="link"
+                                            >
+                                                <h3 className="font-bold inline">
+                                                    McGill University
+                                                    <ExternalLink size={12} className="inline-block ml-1 relative -top-0.5" />
+                                                </h3>
+                                            </a>
                                     <span className="text-zinc-700 text-sm">Montreal, Canada</span>
                                 </div>
                                 <p className="italic">B.Eng - Software Engineering Co-op</p>

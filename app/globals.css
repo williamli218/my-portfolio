@@ -1,57 +1,61 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-geist-sans), sans-serif;
+    font-family: var(--font-geist-sans), sans-serif;
 }
 
 .header {
-  @apply font-bold text-2xl md:text-4xl;
+    @apply font-bold text-2xl md:text-4xl;
 }
 
-.address {
-  @apply flex gap-1 items-center border rounded-lg p-1 transition-all bg-white;
-}
-
-.address:hover {
-  @apply -translate-y-0.5 border-zinc-400;
+.link:hover {
+    @apply font-semibold underline;
 }
 
 .card {
-  @apply shadow-sm transition-all bg-white border rounded-lg;
+    @apply shadow-sm transition-all bg-white border rounded-lg;
 }
 
 .card:hover {
-  @apply shadow-2xl -translate-y-2
+    @apply shadow-2xl -translate-y-2;
 }
 
-.animate-rainbow-text {
-  background: linear-gradient(
-    to right,
-    #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000
-  );
-  background-size: 800% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-slide 15s linear infinite;
+.address {
+    @apply flex gap-1 items-center border rounded-lg p-1 transition-all bg-white;
 }
 
-@keyframes rainbow-slide {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+.address:hover {
+    @apply -translate-y-0.5 border-zinc-400;
 }
 
 .backface-hidden {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+}
+
+.animate-rainbow-text {
+    background: linear-gradient(
+        to right,
+        #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000
+    );
+    background-size: 800% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-slide 15s linear infinite;
+}
+
+@keyframes rainbow-slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 @keyframes scroll-left {
@@ -65,26 +69,4 @@ body {
 
 .animate-scroll-left {
     animation: scroll-left 20s linear infinite;
-}
-
-
-.animate-slide-in-right {
-    animation: slide-in-right 0.4s ease-out;
-}
-
-.animate-slide-in-left {
-    animation: slide-in-left 0.4s ease-out;
-}
-
-@keyframes progress-fill {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-.animate-progress-fill {
-    animation: progress-fill 5s linear;
 }

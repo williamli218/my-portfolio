@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const experiences = [
     {
         logo: "/environnement-routier-nrj.jpg",
         organization: "NRJ Environnement Routier",
+        href: "https://nrj.ca/",
         role: "Software Developer Intern",
         location: "Montreal, Canada",
         dates: "May 2026 - August 2026",
@@ -15,6 +17,7 @@ const experiences = [
     {
         logo: "/mcgill-aerial-design-team.jpg",
         organization: "McGill Aerial Design Team",
+        href: "https://www.mcgillaerialdesign.com/",
         role: "Ground Station & Operator UX",
         location: "Montreal, Canada",
         dates: "October 2025 - April 2026",
@@ -27,6 +30,7 @@ const experiences = [
     {
         logo: "/gamedev-mcgill.jpg",
         organization: "GameDev McGill",
+        href: "https://gamedevmcgill.ca/",
         role: "Game Developer",
         location: "Montreal, Canada",
         dates: "September 2025 - Present",
@@ -58,7 +62,17 @@ export default function Experience() {
                                     />
                                     <div className="flex-1">
                                         <div className="flex flex-wrap justify-between items-center">
-                                            <h3 className="font-bold">{experience.organization}</h3>
+                                            <a
+                                                href={experience.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="link"
+                                            >
+                                                <h3 className="font-bold inline">
+                                                    {experience.organization}
+                                                    <ExternalLink size={12} className="inline-block ml-1 relative -top-0.5" />
+                                                </h3>
+                                            </a>
                                             <span className="text-zinc-700 text-sm">{experience.location}</span>
                                         </div>
                                         <h4 className="italic">{experience.role}</h4>

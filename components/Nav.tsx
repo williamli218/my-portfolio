@@ -31,7 +31,7 @@ export default function Nav() {
                 </figure>
                 <ul className="hidden md:flex gap-4 pr-4">
                     {links.map((section) => (
-                        <li key={section.label}>
+                        <li key={section.label} className="hover:bg-zinc-200 px-2 rounded-lg">
                             <a href={section.href}>{section.label}</a>
                         </li>
                     ))}
