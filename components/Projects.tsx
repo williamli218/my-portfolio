@@ -56,7 +56,7 @@ export default function Projects() {
                                 <div className="flex justify-between items-center">
                                     <div className="flex flex-col">
                                         <h3 className="font-bold">{project.title}</h3>
-                                        <span className="text-zinc-700 text-sm">{project.category}</span>
+                                        <span className="text-zinc-700 text-xs uppercase tracking-wide">{project.category}</span>
                                     </div>
                                     <button
                                         onClick={() => setSelected(project)}
