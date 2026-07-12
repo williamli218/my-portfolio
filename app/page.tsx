@@ -12,9 +12,13 @@ export default function Home() {
     <main className="bg-zinc-100">
       <Hero />
       <About />
+      <div className="h-px w-full mt-16 bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
       <Education />
+      <div className="h-px w-full mt-16 bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
       <Experience />
+      <div className="h-px w-full mt-16 bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
       <Projects />
+      <div className="h-px w-full mt-16 bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
       <Skills />
       <Leadership />
     </main>

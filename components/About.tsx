@@ -11,9 +11,9 @@ export default function About() {
                 <Image 
                     src="/about.jpg"
                     alt="About"
-                    height={280}
-                    width={200}
-                    className="order-1 md:order-2 rounded-lg h-70 w-50"
+                    height={700}
+                    width={500}
+                    className="order-1 md:order-2 rounded-lg h-70 w-auto"
                 />
             </article>
         </section>

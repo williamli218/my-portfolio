@@ -48,3 +48,21 @@ body {
     background-position: 100% 50%;
   }
 }
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--scroll-distance, 0px)));
+    }
+}
+
+.animate-scroll-left {
+    animation: scroll-left 10s linear infinite;
+}

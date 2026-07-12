@@ -9,10 +9,10 @@ export default function Education() {
     return (
         <section className="flex flex-col items-center pt-16" id="education">
             <h2 className="header">Education</h2>
-            <div className="m-8 [perspective:1200px]">
-                <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] ${
+            <div className="m-8 [perspective:1200px] min-h-[100px]">
+                <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] [will-change:transform] ${
         isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
-                    <article className="flex flex-col gap-2 card relative [backface-visibility:hidden] p-4">
+                    <article className="flex flex-col gap-2 card relative backface-hidden p-4">
                         <div className="flex items-center gap-4">
                             <Image
                                 src="/mcgill-university.jpg"
@@ -44,11 +44,11 @@ export default function Education() {
                         </p>
                         <p className="font-semibold">Richard Karper Scholarship in Engineering ($3,000)</p>
                     </article>
-                    <article className="flex gap-8 items-center card absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <article className="flex gap-8 p-4 items-center card absolute inset-0 backface-hidden [transform:rotateY(180deg)]">
                         <button
                             onClick={() => setIsFlipped(false)}
                             aria-label="Back to overview"
-                            className="border rounded-lg px-3 py-1 text-sm hover:bg-zinc-100 transition-colors mb-2"
+                            className="border rounded-lg px-3 py-1 text-sm hover:bg-zinc-100 transition-colors"
                         >
                             ←
                         </button>
