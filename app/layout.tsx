@@ -10,8 +10,36 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://my-portfolio-alpha-peach-40.vercel.app/"),
   title: "William Li | Portfolio",
   description: "William Li's personal portfolio website",
+  keywords: ["William Li", "software developer", "portfolio", "McGill University"],
+  authors: [{ name: "William Li" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "William Li | Portfolio",
+    description: "William Li's personal portfolio website",
+    images: [
+      {
+        url: "/portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "William Li Portfolio preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "William Li | Portfolio",
+    description: "William Li's personal portfolio website",
+    images: ["/portfolio.png"],
+  },
 };
 
 export default function RootLayout({
