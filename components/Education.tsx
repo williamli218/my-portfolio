@@ -3,14 +3,25 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import { useFadeIn } from "@/hooks/useFadeIn"
 
 export default function Education() {
     const [isFlipped, setIsFlipped] = useState(false);
+    const title = useFadeIn();
+    const content = useFadeIn();
 
     return (
         <section className="flex flex-col items-center pt-16" id="education">
-            <h2 className="header">Education</h2>
-            <div className="m-8 [perspective:1200px] min-h-[100px]">
+            <h2 
+                className={`header fade-in-section ${title.isVisible ? "is-visible" : ""}`}
+                ref={title.ref}
+            >
+                Education
+            </h2>
+            <div 
+                className={`m-8 [perspective:1200px] min-h-[100px] fade-in-section ${content.isVisible ? "is-visible" : ""}`}
+                ref={content.ref}
+            >
                 <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] [will-change:transform] ${
         isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
                     <article className="flex flex-col gap-2 card relative backface-hidden p-4">

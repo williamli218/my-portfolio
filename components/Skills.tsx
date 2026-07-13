@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useFadeIn } from "@/hooks/useFadeIn"
 
 const programmingLanguages = [
     { src: "/python.svg", alt: "Python" },
@@ -84,14 +85,36 @@ function IconGrid({ items }: { items: { src: string; alt: string }[] }) {
 }
 
 export default function Skills() {
-  return (
-    <section className="flex flex-col gap-4 items-center pt-16 mx-8 md:mx-16" id="skills">
-      <h2 className="header">Technical Skills</h2>
-      <h3 className="font-bold text-xl">Programming Languages</h3>
-      <IconGrid items={programmingLanguages} />
+    const titleFade = useFadeIn();
+    const languagesFade = useFadeIn();
+    const toolsFade = useFadeIn();
 
-      <h3 className="font-bold text-xl">Frameworks, Libraries & Tools</h3>
-      <IconGrid items={frameworksLibrariesTools} />
-    </section>
-  );
+    return (
+        <section className="flex flex-col gap-4 items-center pt-16 mx-8 md:mx-16" id="skills">
+            
+            <h2 
+                ref={titleFade.ref}
+                className={`header fade-in-section ${titleFade.isVisible ? "is-visible" : ""}`}
+            >
+                Technical Skills
+            </h2>
+            
+            <div 
+                ref={languagesFade.ref}
+                className={`w-full flex flex-col items-center gap-4 fade-in-section ${languagesFade.isVisible ? "is-visible" : ""}`}
+            >
+                <h3 className="font-bold text-xl">Programming Languages</h3>
+                <IconGrid items={programmingLanguages} />
+            </div>
+
+            <div 
+                ref={toolsFade.ref}
+                className={`w-full flex flex-col items-center gap-4 fade-in-section ${toolsFade.isVisible ? "is-visible" : ""}`}
+            >
+                <h3 className="font-bold text-xl">Frameworks, Libraries & Tools</h3>
+                <IconGrid items={frameworksLibrariesTools} />
+            </div>
+            
+        </section>
+    );
 }

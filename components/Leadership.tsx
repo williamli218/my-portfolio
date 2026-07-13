@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react";
+import { useFadeIn } from "@/hooks/useFadeIn"
 
 const extracurricular = [
     {
@@ -56,6 +57,8 @@ export default function Leadership() {
     const [index, setIndex] = useState(0);
     const touchStartX = useRef<number | null>(null);
     const touchDeltaX = useRef(0);
+    const title = useFadeIn();
+    const content = useFadeIn();
 
     const goPrev = () => {
         setIndex((current) => (current === 0 ? extracurricular.length - 1 : current - 1));
@@ -100,9 +103,17 @@ export default function Leadership() {
 
     return (
         <section id="leadership" className="pt-16 flex flex-col items-center px-8 pb-16">
-            <h2 className="header">Leadership</h2>
+            <h2 
+                className={`header fade-in-section ${title.isVisible ? "is-visible" : ""}`}
+                ref={title.ref}
+            >
+                Leadership
+            </h2>
 
-            <div className="relative flex items-center gap-8 my-8 w-full md:w-3xl">
+            <div 
+                className={`relative flex items-center gap-8 my-8 w-full md:w-3xl fade-in-section ${content.isVisible ? "is-visible" : ""}`}
+                ref={content.ref}
+            >
                 <button
                     onClick={goPrev}
                     aria-label="Previous"
@@ -147,7 +158,6 @@ export default function Leadership() {
                 </button>
             </div>
 
-            {/* progress-indicator dots */}
             <div className="flex gap-2 items-center">
                 {extracurricular.map((_, i) => (
                     <button

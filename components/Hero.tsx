@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { MapPin, GraduationCap, Mail } from "lucide-react";
+import { useFadeIn } from "@/hooks/useFadeIn"
 
 export default function Hero() {
+    const { ref, isVisible } = useFadeIn();
+
     return (
-        <section className="flex flex-col items-center pt-16 gap-2" id="hero">
+        <section 
+            className={`flex flex-col items-center pt-16 gap-2 fade-in-section ${isVisible ? "is-visible" : ""}`}
+            id="hero"
+            ref={ref}
+        >
             <Image
                 src="/profile.jpg"
                 alt="Profile Image"
