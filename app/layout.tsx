@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://my-portfolio-alpha-peach-40.vercel.app/"),
+  metadataBase: new URL("https://williamli-my-portfolio.vercel.app/"),
   title: "William Li | Portfolio",
   description: "William Li's personal portfolio website",
   keywords: ["William Li", "software developer", "portfolio", "McGill University"],
