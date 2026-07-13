@@ -1,4 +1,3 @@
-// hooks/useFadeIn.ts
 "use client"
 
 import { useEffect, useRef, useState } from "react";
@@ -15,10 +14,10 @@ export function useFadeIn() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
-                    observer.unobserve(element); // only trigger once
+                    observer.unobserve(element);
                 }
             },
-            { threshold: 0.15 } // fires when 15% of the element is visible
+            { threshold: 0.15 }
         );
 
         observer.observe(element);
