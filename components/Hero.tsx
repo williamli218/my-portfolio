@@ -9,7 +9,7 @@ export default function Hero() {
 
     return (
         <section 
-            className={`flex flex-col items-center pt-16 gap-2 fade-in-section ${isVisible ? "is-visible" : ""}`}
+            className={`flex flex-col items-center pt-16 px-4 gap-2 fade-in-section ${isVisible ? "is-visible" : ""}`}
             id="hero"
             ref={ref}
         >
@@ -27,7 +27,7 @@ export default function Hero() {
                 I am William Li
             </h1>
 
-            <ul className="flex gap-4 text-sm text-zinc-700">
+            <ul className="flex gap-4 text-sm text-zinc-700 flex-wrap justify-center">
                 <li className="flex gap-1 items-center">
                     <MapPin size={16} />
                     <a 
@@ -53,7 +53,7 @@ export default function Hero() {
             </ul>
 
             <address className="not-italic mt-2">
-                <ul className="flex gap-4">
+                <ul className="flex gap-4 flex-wrap justify-center">
                     <li className="address">
                         <Image 
                             src="/linkedin.svg"
