@@ -52,7 +52,10 @@ function IconGrid({ items }: { items: { src: string; alt: string }[] }) {
             >
                 <div ref={firstGroupRef} className="flex gap-8 md:gap-12 shrink-0">
                     {items.map((item) => (
-                        <figure key={item.alt} className="shrink-0 flex flex-col items-center">
+                        <figure 
+                            key={item.alt} 
+                            className="shrink-0 flex flex-col items-center"
+                        >
                             <Image
                                 src={item.src}
                                 alt={item.alt}
@@ -65,7 +68,10 @@ function IconGrid({ items }: { items: { src: string; alt: string }[] }) {
                     ))}
                 </div>
 
-                <div className="flex gap-8 md:gap-12 shrink-0" aria-hidden="true">
+                <div 
+                    className="flex gap-8 md:gap-12 shrink-0" 
+                    aria-hidden="true"
+                >
                     {[...items, ...items, ...items].map((item, index) => (
                         <figure key={`${item.alt}-${index}dup`} className="shrink-0 flex flex-col items-center">
                             <Image
@@ -90,8 +96,10 @@ export default function Skills() {
     const toolsFade = useFadeIn();
 
     return (
-        <section className="flex flex-col gap-4 items-center pt-16 mx-8 md:mx-16" id="skills">
-            
+        <section 
+            className="flex flex-col gap-4 items-center pt-16 mx-8 md:mx-16" 
+            id="skills"
+        >
             <h2 
                 ref={titleFade.ref}
                 className={`header fade-in-section ${titleFade.isVisible ? "is-visible" : ""}`}
@@ -114,7 +122,6 @@ export default function Skills() {
                 <h3 className="font-bold text-xl">Frameworks, Libraries & Tools</h3>
                 <IconGrid items={frameworksLibrariesTools} />
             </div>
-            
         </section>
     );
 }

@@ -51,7 +51,11 @@ export default function Projects() {
             <div className="m-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-5xl">
                     {projects.map((project) => (
-                        <ProjectCard key={project.title} project={project} onSelect={setSelected} />
+                        <ProjectCard 
+                            key={project.title} 
+                            project={project} 
+                            onSelect={setSelected} 
+                        />
                     ))}
                 </div>
             </div>
@@ -102,9 +106,18 @@ export default function Projects() {
                                 ))}
                             </div>
                             <figure className="flex gap-2 items-center border rounded-lg p-1 self-start bg-black text-white">
-                                <Image src="/github.svg" alt="GitHub" width={24} height={24} />
+                                <Image 
+                                    src="/github.svg" 
+                                    alt="GitHub" 
+                                    width={24} 
+                                    height={24} 
+                                />
                                 <figcaption>
-                                    <a href={selected.github} target="_blank" rel="noopener noreferrer">
+                                    <a 
+                                        href={selected.github} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
                                         GitHub
                                     </a>
                                 </figcaption>

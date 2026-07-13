@@ -11,19 +11,22 @@ export default function Education() {
     const content = useFadeIn();
 
     return (
-        <section className="flex flex-col items-center pt-16" id="education">
+        <section 
+            className="flex flex-col items-center pt-16" 
+            id="education"
+        >
             <h2 
                 className={`header fade-in-section ${title.isVisible ? "is-visible" : ""}`}
                 ref={title.ref}
             >
                 Education
             </h2>
+
             <div 
                 className={`m-8 [perspective:1200px] min-h-[100px] fade-in-section ${content.isVisible ? "is-visible" : ""}`}
                 ref={content.ref}
             >
-                <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] [will-change:transform] ${
-        isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
+                <div className={`relative w-full transition-transform duration-700 [transform-style:preserve-3d] [will-change:transform] ${isFlipped ? "[transform:rotateY(180deg)]" : ""}`}>
                     <article className="flex flex-col gap-2 card relative backface-hidden p-4">
                         <div className="flex items-center gap-4">
                             <Image
@@ -36,16 +39,19 @@ export default function Education() {
                             <div className="flex-1">
                                 <div className="flex flex-wrap justify-between items-center">
                                     <a
-                                                href="https://www.mcgill.ca/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="link"
-                                            >
-                                                <h3 className="font-bold inline">
-                                                    McGill University
-                                                    <ExternalLink size={12} className="inline-block ml-1 relative -top-0.5" />
-                                                </h3>
-                                            </a>
+                                        href="https://www.mcgill.ca/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="link"
+                                    >
+                                        <h3 className="font-bold inline">
+                                            McGill University
+                                            <ExternalLink 
+                                                size={12} 
+                                                className="inline-block ml-1 relative -top-0.5" 
+                                            />
+                                        </h3>
+                                    </a>
                                     <span className="text-zinc-700 text-sm">Montreal, Canada</span>
                                 </div>
                                 <p className="italic">B.Eng - Software Engineering Co-op</p>
@@ -64,7 +70,10 @@ export default function Education() {
                         <p>
                             <span className="border rounded-lg p-1 bg-zinc-100">GPA: 4.0/4.0</span>
                         </p>
-                        <p className="font-semibold">Richard Karper Scholarship in Engineering ($3,000)</p>
+                        <div>
+                            <p className="font-semibold">Richard Karper Scholarship in Engineering ($3,000)</p>
+                            <p className="text-sm text-zinc-700">- Outstanding academic grades</p> 
+                        </div>
                     </article>
                     <article className="flex gap-8 p-4 items-center card absolute inset-0 backface-hidden [transform:rotateY(180deg)]">
                         <button

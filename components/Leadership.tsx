@@ -31,10 +31,8 @@ function ProgressBar({ duration }: { duration: number }) {
     const [filled, setFilled] = useState(false);
 
     useEffect(() => {
-        setFilled(false); // reset to empty immediately
+        setFilled(false);
 
-        // wait one frame so the browser actually paints the 0% state
-        // before we switch to 100% - otherwise the transition gets skipped
         const raf = requestAnimationFrame(() => {
             requestAnimationFrame(() => setFilled(true));
         });
@@ -72,14 +70,13 @@ export default function Leadership() {
         setIndex(i);
     };
 
-    // autoplay: advance to next slide every SLIDE_DURATION ms
     useEffect(() => {
         const timer = setInterval(() => {
             goNext();
         }, SLIDE_DURATION);
 
         return () => clearInterval(timer);
-    }, [index]); // resets the timer every time index changes (manual or auto)
+    }, [index]);
 
     const handleTouchStart = (e: React.TouchEvent) => {
         touchStartX.current = e.touches[0].clientX;
@@ -102,7 +99,10 @@ export default function Leadership() {
     };
 
     return (
-        <section id="leadership" className="pt-16 flex flex-col items-center px-8 pb-16">
+        <section 
+            id="leadership" 
+            className="pt-16 flex flex-col items-center px-8 pb-16"
+        >
             <h2 
                 className={`header fade-in-section ${title.isVisible ? "is-visible" : ""}`}
                 ref={title.ref}

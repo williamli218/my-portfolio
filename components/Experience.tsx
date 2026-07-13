@@ -46,7 +46,10 @@ export default function Experience() {
     const title = useFadeIn();
 
     return (
-        <section className="flex flex-col items-center pt-16" id="experience">
+        <section 
+            className="flex flex-col items-center pt-16" 
+            id="experience">
+
             <h2
                 ref={title.ref}
                 className={`header fade-in-section ${title.isVisible ? "is-visible" : ""}`}
@@ -58,7 +61,10 @@ export default function Experience() {
                 <div className="absolute left-0 top-0 bottom-0 w-px bg-zinc-900" />
                 <div className="space-y-8">
                     {experiences.map((experience) => (
-                        <ExperienceCard key={experience.organization} experience={experience} />
+                        <ExperienceCard 
+                            key={experience.organization} 
+                            experience={experience} 
+                        />
                     ))}
                 </div>
             </div>

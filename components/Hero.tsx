@@ -61,7 +61,13 @@ export default function Hero() {
                             width={24}
                             height={24}
                         />
-                        <a href="https://www.linkedin.com/in/williamli218/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a 
+                            href="https://www.linkedin.com/in/williamli218/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
                     </li>
                     <li className="address">
                         <Image 
@@ -70,7 +76,13 @@ export default function Hero() {
                             width={24}
                             height={24}
                         />
-                        <a href="https://github.com/williamli218" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a 
+                            href="https://github.com/williamli218" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
                     </li>
                     <li className="address">
                         <Mail />
