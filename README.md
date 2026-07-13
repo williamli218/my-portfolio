@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
+
+Personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS — showcasing education, work experience, projects, technical skills, and leadership/extracurricular activities.
+
+🔗 **Live site:** [my-portfolio-big-willy2006.vercel.app](https://my-portfolio-big-willy2006.vercel.app)
+
+## Features
+
+- **Sticky navigation** with active-section highlighting — the current section is detected via scroll position and highlighted in the nav as you scroll, with a responsive mobile menu (hamburger toggle)
+- **Flip-card Education section** — a 3D CSS flip card (`perspective` + `backface-visibility`) that reveals relevant coursework on the back face
+- **Timeline-style Experience section** — a vertical timeline with external links to each organization
+- **Interactive Projects grid** — each project opens in a full-screen modal (blurred backdrop, scroll-lock, animated open/close) with more detail, tools used, and a GitHub link
+- **Infinite auto-scrolling marquee** for technical skills — a seamless, pixel-precise looping strip of icons (measured at runtime to avoid any visual seam/snap)
+- **Swipeable image carousel** for leadership/extracurricular highlights — supports arrow navigation (desktop), touch swipe (mobile), autoplay with a visual progress-bar indicator, and dot navigation
+- **Scroll-triggered fade-in animations** across sections, using a custom `useFadeIn` hook built on the Intersection Observer API
+- **SEO & social metadata** — Open Graph and Twitter card previews, custom favicon
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [lucide-react](https://lucide.dev) for icons
+- [Geist](https://vercel.com/font) font, via `next/font`
+- Deployed on [Vercel](https://vercel.com)
+
+## Project Structure
+
+```
+├── app/                # App Router pages, layout, and global metadata
+├── components/         # Section and UI components (Nav, Hero, About,
+│                        # Education, Experience, Projects, Skills,
+│                        # Leadership, Footer, etc.)
+├── hooks/               # Custom hooks (useFadeIn, useActiveSection)
+├── public/              # Static assets (images, icons, logos)
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The page auto-updates as you edit files under `app/` or `components/`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+```bash
+npm run dev      # start the local development server
+npm run build    # create a production build
+npm run start    # run the production build locally
+npm run lint     # run ESLint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Notable Implementation Details
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A few things worth mentioning under the hood:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Marquee precision**: the Skills marquee measures the real rendered width of one icon group (`offsetWidth`) plus the actual computed `column-gap`, rather than assuming an even split of total scroll width — this avoids a subtle rounding error that otherwise causes a visible "snap" at the loop point.
+- **Carousel**: built as a single continuous flex track shifted via `translateX(-index * 100%)`, rather than mounting/unmounting individual slides — this keeps all slides "physically" adjacent for a seamless scroll feel, and supports touch gestures via `touchstart`/`touchmove`/`touchend` handlers with a configurable swipe distance threshold.
+- **Active nav highlighting**: rather than relying purely on Intersection Observer thresholds (which behaved inconsistently across sections of very different heights), the active section is determined by checking which section's top edge has most recently scrolled past a fixed offset — calculated on scroll with `requestAnimationFrame` throttling.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is deployed on [Vercel](https://vercel.com), the platform built by the creators of Next.js. See the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details on deploying your own instance.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+**William Li**
+[GitHub](https://github.com/williamli218)
