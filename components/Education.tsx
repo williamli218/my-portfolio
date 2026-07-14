@@ -72,7 +72,7 @@ export default function Education() {
                         </p>
                         <div>
                             <p className="font-semibold">Richard Karper Scholarship in Engineering ($3,000)</p>
-                            <p className="text-sm text-zinc-700">- Outstanding academic grades</p> 
+                            <p className="text-sm text-zinc-700">- Academic merit</p> 
                         </div>
                     </article>
                     <article className="flex gap-8 p-4 items-center card absolute inset-0 backface-hidden [transform:rotateY(180deg)]">
