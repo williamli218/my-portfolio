@@ -21,6 +21,26 @@ const projects = [
             { src: "/css.svg", alt: "CSS" }
         ],
         github: "https://github.com/williamli218/my-portfolio"
+    },
+    {
+        title: "Task Scheduler",
+        category: "Full-Stack",
+        src: "/task-scheduler.png",
+        alt: "task-scheduler",
+        description: "A full-stack task and event scheduler with user authentication and a calendar view using React, Express, TypeScript, raw SQL and deployment.",
+        tools: [
+            { src: "/react.svg", alt: "React" },
+            { src: "/vite.svg", alt: "Vite" },
+            { src: "/react-router.svg", alt: "React Router" },
+            { src: "/full-calendar.png", alt: "FullCalendar" },
+            { src: "/node-js.svg", alt: "Node.js" },
+            { src: "/express-js.png", alt: "Express" },
+            { src: "/postgresql.svg", alt: "PostgreSQL" }, 
+            { src: "/neon.png", alt: "Neon" },
+            { src: "/bcrypt.png", alt: "bcrypt" },
+            { src: "/jwt.png", alt: "JWT" }
+        ],
+        github: "https://github.com/williamli218/task-scheduler"
     }
 ];
 

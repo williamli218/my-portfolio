@@ -48,7 +48,7 @@ export function ProjectCard({
                             More details
                         </button>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap gap-2">
                         {project.tools.map((tool) => (
                             <Image 
                                 key={tool.alt} 
