@@ -7,22 +7,6 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
     {
-        title: "Portfolio",
-        category: "Front-End",
-        src: "/portfolio.png",
-        alt: "portfolio",
-        description: "Built a responsive personal portfolio using Next.js, React, TypeScript, and Tailwind CSS, with semantic HTML and reusable components for a clean, accessible UI.",
-        tools: [
-            { src: "/typescript.svg", alt: "TypeScript" },
-            { src: "/react.svg", alt: "React" },
-            { src: "/next-js.svg", alt: "Next.js" },
-            { src: "/tailwind.svg", alt: "Tailwind CSS" },
-            { src: "/html.svg", alt: "HTML" },
-            { src: "/css.svg", alt: "CSS" }
-        ],
-        github: "https://github.com/williamli218/my-portfolio"
-    },
-    {
         title: "Task Scheduler",
         category: "Full-Stack",
         src: "/task-scheduler.png",
@@ -41,6 +25,22 @@ const projects = [
             { src: "/jwt.png", alt: "JWT" }
         ],
         github: "https://github.com/williamli218/task-scheduler"
+    },
+    {
+        title: "Portfolio",
+        category: "Front-End",
+        src: "/portfolio.png",
+        alt: "portfolio",
+        description: "Built a responsive personal portfolio using Next.js, React, TypeScript, and Tailwind CSS, with semantic HTML and reusable components for a clean, accessible UI.",
+        tools: [
+            { src: "/typescript.svg", alt: "TypeScript" },
+            { src: "/react.svg", alt: "React" },
+            { src: "/next-js.svg", alt: "Next.js" },
+            { src: "/tailwind.svg", alt: "Tailwind CSS" },
+            { src: "/html.svg", alt: "HTML" },
+            { src: "/css.svg", alt: "CSS" }
+        ],
+        github: "https://github.com/williamli218/my-portfolio"
     }
 ];
 
